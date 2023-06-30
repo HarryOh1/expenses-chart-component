@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <!-- google font -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+    </style>
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+          },
+          extend: {
+            colors: {
+              red: '#EC755D',
+              lightRed: '#FF9B86',
+              cyan: '#76B5BC',
+              lightCyan: '#B4E0E5',
+              darkBrown: '#382314',
+              mediumBrown: '#92857A',
+              creamBG: '#F8E9DD',
+              cardWhite: '#FFFBF6',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+
+  <body class="bg-creamBG flex items-center justify-center h-screen">
+    <!-- container -->
+    <div class="w-[343px] md:w-[540px]">
+      <!-- upper -->
+      <div
+        class="bg-red flex items-center justify-between rounded-[10px] h-[97px] pl-5 pr-6 md:h-[125px] md:pl-8 md:pr-[39px]"
+      >
+        <div class="text-white">
+          <p class="text-[15px] leading-5 md:text-lg">My balance</p>
+          <h3 class="text-2xl font-bold mt-1 md:text-3xl">$921.48</h3>
+        </div>
+        <!-- circles -->
+        <div class="w-10 h-10 rounded-full bg-darkBrown">
+          <div
+            class="w-10 h-10 rounded-full border-2 border-white -translate-x-1/2"
+          ></div>
+        </div>
+      </div>
+
+      <!-- lower -->
+      <div
+        class="bg-cardWhite px-5 py-6 rounded-[10px] mt-4 md:px-10 md:pt-8 md:pb-10"
+      >
+        <h2 class="text-2xl font-bold text-darkBrown md:text-[32px]">
+          Spending - Last 7 days
+        </h2>
+        <!-- histogram -->
+        <div
+          class="flex justify-between items-end space-x-3 pt-[52px] duration-200 md:space-x-4 md:pt-[66px]"
+        >
+          <!-- mon -->
+          <div class="w-full relative group">
+            <div
+              class="w-full h-[50px] bg-red rounded-[3px] hover:bg-lightRed duration-200"
+            ></div>
+            <div
+              class="absolute font-bold text-xs text-cardWhite bg-darkBrown p-1 rounded-[5px] top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(100%_+_4px)] -translate-y-2 hidden group-hover:block md:w-[75px] md:h-10 md:text-lg md:font-bold md:-translate-y-[calc(100%_+_8px)]"
+            >
+              <div class="flex justify-center items-center">$17.45</div>
+            </div>
+          </div>
+
+          <!-- tue -->
+          <div class="w-full relative group">
+            <div
+              class="w-full h-[100px] bg-red rounded-[3px] hover:bg-lightRed duration-200"
+            ></div>
+            <div
+              class="absolute font-bold text-xs text-cardWhite bg-darkBrown p-1 rounded-[5px] top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(100%_+_4px)] -translate-y-2 hidden group-hover:block md:w-[75px] md:h-10 md:text-lg md:font-bold md:-translate-y-[calc(100%_+_8px)]"
+            >
+              <div class="flex justify-center items-center">$34.91</div>
+            </div>
+          </div>
+
+          <!-- wed -->
+          <div class="w-full relative group">
+            <div
+              class="w-full h-[150px] bg-cyan rounded-[3px] hover:bg-lightCyan duration-200"
+            ></div>
+            <div
+              class="absolute font-bold text-xs text-cardWhite bg-darkBrown p-1 rounded-[5px] top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(100%_+_4px)] -translate-y-2 hidden group-hover:block md:w-[75px] md:h-10 md:text-lg md:font-bold md:-translate-y-[calc(100%_+_8px)]"
+            >
+              <div class="flex justify-center items-center">$52.36</div>
+            </div>
+          </div>
+
+          <!-- thu -->
+          <div class="w-full relative group">
+            <div
+              class="w-full h-[89px] bg-red rounded-[3px] hover:bg-lightRed duration-200"
+            ></div>
+            <div
+              class="absolute font-bold text-xs text-cardWhite bg-darkBrown p-1 rounded-[5px] top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(100%_+_4px)] -translate-y-2 hidden group-hover:block md:w-[75px] md:h-10 md:text-lg md:font-bold md:-translate-y-[calc(100%_+_8px)]"
+            >
+              <div class="flex justify-center items-center">$31.07</div>
+            </div>
+          </div>
+
+          <!-- fri -->
+          <div class="w-full relative group">
+            <div
+              class="w-full h-[67px] bg-red rounded-[3px] hover:bg-lightRed duration-200"
+            ></div>
+            <div
+              class="absolute font-bold text-xs text-cardWhite bg-darkBrown p-1 rounded-[5px] top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(100%_+_4px)] -translate-y-2 hidden group-hover:block md:w-[75px] md:h-10 md:text-lg md:font-bold md:-translate-y-[calc(100%_+_8px)]"
+            >
+              <div class="flex justify-center items-center">$23.39</div>
+            </div>
+          </div>
+
+          <!-- sat -->
+          <div class="w-full relative group">
+            <div
+              class="w-full h-[124px] bg-red rounded-[3px] hover:bg-lightRed duration-200"
+            ></div>
+            <div
+              class="absolute font-bold text-xs text-cardWhite bg-darkBrown p-1 rounded-[5px] top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(100%_+_4px)] -translate-y-2 hidden group-hover:block md:w-[75px] md:h-10 md:text-lg md:font-bold md:-translate-y-[calc(100%_+_8px)]"
+            >
+              <div class="flex justify-center items-center">$43.28</div>
+            </div>
+          </div>
+
+
+          <!-- sun -->
+          <div class="w-full relative group">
+            <div
+              class="w-full h-[73px] bg-red rounded-[3px] hover:bg-lightRed duration-200"
+            ></div>
+            <div
+              class="absolute font-bold text-xs text-cardWhite bg-darkBrown p-1 rounded-[5px] top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(100%_+_4px)] -translate-y-2 hidden group-hover:block md:w-[75px] md:h-10 md:text-lg md:font-bold md:-translate-y-[calc(100%_+_8px)]"
+            >
+              <div class="flex justify-center items-center">$25.48</div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- days -->
+        <div class="flex justify-between space-x-3 mt-3 md:space-x-4">
+          <p
+            class="w-full text-center text-xs text-mediumBrown md:text-[15px] leading-5"
+          >
+            mon
+          </p>
+          <p
+            class="w-full text-center text-xs text-mediumBrown md:text-[15px] leading-5"
+          >
+            tue
+          </p>
+          <p
+            class="w-full text-center text-xs text-mediumBrown md:text-[15px] leading-5"
+          >
+            wed
+          </p>
+          <p
+            class="w-full text-center text-xs text-mediumBrown md:text-[15px] leading-5"
+          >
+            thu
+          </p>
+          <p
+            class="w-full text-center text-xs text-mediumBrown md:text-[15px] leading-5"
+          >
+            fri
+          </p>
+          <p
+            class="w-full text-center text-xs text-mediumBrown md:text-[15px] leading-5"
+          >
+            sat
+          </p>
+          <p
+            class="w-full text-center text-xs text-mediumBrown md:text-[15px] leading-5"
+          >
+            sun
+          </p>
+        </div>
+        
+
+        <!-- total -->
+        <div
+          class="flex justify-between items-end pt-6 border-t-2 mt-6 border-creamBG md:pt-8 md:mt-8"
+        >
+          <!-- left -->
+          <div>
+            <p class="text-[15px] text-mediumBrown md:text-lg">
+              Total this month
+            </p>
+            <h1 class="text-darkBrown text-3xl font-bold md:text-5xl">
+              $478.33
+            </h1>
+          </div>
+          <!-- right -->
+          <div class="text-right">
+            <h4
+              class="text-[l5px] text-darkBrown font-bold leading-5 md:leading-6 md:text-lg"
+            >
+              +2.4%
+            </h4>
+            <p
+              class="text-[15px] text-mediumBrown leading-5 md:leading-6 md:text-lg"
+            >
+              from last month
+            </p>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
